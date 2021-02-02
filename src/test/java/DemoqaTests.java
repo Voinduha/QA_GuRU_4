@@ -18,16 +18,16 @@ public class DemoqaTests {
     }
     @Test
     void textFields() {
-        open("https://demoqa.com/automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");    // Open URL
         $(".main-header").shouldHave(text("Practice Form"));
 
-        $("#firstName").setValue("Dan");
-        $("#lastName").setValue("Vu");
-        $("#userEmail").setValue("danvu@ya.ru");
+        $("#firstName").setValue("Dan");                            // Type name
+        $("#lastName").setValue("Vu");                              // Type lastname
+        $("#userEmail").setValue("danvu@ya.ru");                    // Type email
 
 
-        $("label[for='gender-radio-3']").click();
-        $("#userNumber").setValue("1234567890");
+        $("label[for='gender-radio-3']").click();                   // Click radio button
+        $("#userNumber").setValue("1234567890");                    // Set mobile
 
 
         $("#dateOfBirthInput").click();
@@ -53,7 +53,7 @@ public class DemoqaTests {
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
-        $(By.xpath("/html/body/div[3]/div/div/div[2]/div/table/tbody/tr[1]/td[2]")).shouldHave(text("Dan Vu"));
+        $(By.xpath("/html/body/div[3]/div/div/div[2]/div/table/tbody/tr[1]/td[2]")).shouldHave(text("Dan Vu"));           //Name
         $(By.xpath("/html/body/div[3]/div/div/div[2]/div/table/tbody/tr[2]/td[2]")).shouldHave(text("danvu@ya.ru"));     //mail
         $(By.xpath("/html/body/div[3]/div/div/div[2]/div/table/tbody/tr[3]/td[2]")).shouldHave(text("Other"));           //Gender
         $(By.xpath("/html/body/div[3]/div/div/div[2]/div/table/tbody/tr[4]/td[2]")).shouldHave(text("1234567890"));      //mobile
@@ -64,5 +64,5 @@ public class DemoqaTests {
         $(By.xpath("/html/body/div[3]/div/div/div[2]/div/table/tbody/tr[9]/td[2]")).shouldHave(text("test")); //address
         $(By.xpath("/html/body/div[3]/div/div/div[2]/div/table/tbody/tr[10]/td[2]")).shouldHave(text("NCR Gurgaon")); //state and city
 
-    }
+                    }
     }
