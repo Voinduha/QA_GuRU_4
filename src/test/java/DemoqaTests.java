@@ -50,8 +50,6 @@ public class DemoqaTests {
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $x("//div[@class='modal-content']").shouldHave(text("Dan Vu"));
-
-
         $x("//div[@class='table-responsive']").shouldHave(text("danvu@ya.ru"));
         $x("//div[@class='table-responsive']").shouldHave(text("Other"));
         $x("//div[@class='table-responsive']").shouldHave(text("1234567890"));
